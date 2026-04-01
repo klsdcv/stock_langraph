@@ -1,0 +1,395 @@
+{
+  "backtest_date": "2026-04-01",
+  "weeks": 12,
+  "eval_days": 10,
+  "total_samples": 105,
+  "agent_accuracy": {
+    "price": {
+      "correlation": 0.256,
+      "accuracy": 0.602,
+      "samples": 103
+    },
+    "fundamental": {
+      "correlation": 0.222,
+      "accuracy": 0.533,
+      "samples": 105
+    },
+    "supply_demand": {
+      "correlation": 0.105,
+      "accuracy": 0.41,
+      "samples": 105
+    },
+    "consensus": {
+      "correlation": 0.14,
+      "accuracy": 0.41,
+      "samples": 105
+    }
+  },
+  "per_stock_accuracy": {
+    "005380.KS": {
+      "name": "현대차",
+      "agents": {
+        "price": {
+          "correlation": 0.139,
+          "accuracy": 0.5
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.5
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.5
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.5
+        }
+      }
+    },
+    "000660.KS": {
+      "name": "SK하이닉스",
+      "agents": {
+        "price": {
+          "correlation": 0.113,
+          "accuracy": 0.8
+        },
+        "fundamental": {
+          "correlation": -0.0,
+          "accuracy": 0.8
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.8
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.8
+        }
+      }
+    },
+    "TSLA": {
+      "name": "Tesla",
+      "agents": {
+        "price": {
+          "correlation": -0.695,
+          "accuracy": 0.636
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.909
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.091
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.091
+        }
+      }
+    },
+    "MSFT": {
+      "name": "Microsoft",
+      "agents": {
+        "price": {
+          "correlation": -0.241,
+          "accuracy": 0.636
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.273
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.273
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.273
+        }
+      }
+    },
+    "AAPL": {
+      "name": "Apple",
+      "agents": {
+        "price": {
+          "correlation": -0.489,
+          "accuracy": 0.455
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.273
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.273
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.273
+        }
+      }
+    },
+    "035720.KS": {
+      "name": "카카오",
+      "agents": {
+        "price": {
+          "correlation": -0.108,
+          "accuracy": 0.6
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.7
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.3
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.3
+        }
+      }
+    },
+    "005930.KS": {
+      "name": "삼성전자",
+      "agents": {
+        "price": {
+          "correlation": 0.293,
+          "accuracy": 0.7
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.7
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.7
+        },
+        "consensus": {
+          "correlation": -0.0,
+          "accuracy": 0.7
+        }
+      }
+    },
+    "NVDA": {
+      "name": "NVIDIA",
+      "agents": {
+        "price": {
+          "correlation": -0.129,
+          "accuracy": 0.455
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.455
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.455
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.455
+        }
+      }
+    },
+    "035420.KS": {
+      "name": "NAVER",
+      "agents": {
+        "price": {
+          "correlation": -0.253,
+          "accuracy": 0.5
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.3
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.3
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.3
+        }
+      }
+    },
+    "GOOGL": {
+      "name": "Alphabet",
+      "agents": {
+        "price": {
+          "correlation": -0.046,
+          "accuracy": 0.636
+        },
+        "fundamental": {
+          "correlation": 0.0,
+          "accuracy": 0.455
+        },
+        "supply_demand": {
+          "correlation": 0.0,
+          "accuracy": 0.455
+        },
+        "consensus": {
+          "correlation": 0.0,
+          "accuracy": 0.455
+        }
+      }
+    }
+  },
+  "optimal_weights": {
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.05,
+      "supply_demand": 0.3,
+      "consensus": 0.2,
+      "disclosure": 0.1333,
+      "news": 0.1333,
+      "macro": 0.1333
+    },
+    "score": 1.0,
+    "candidates_tried": 2328
+  },
+  "per_stock_weights": {
+    "005380.KS": {
+      "name": "현대차",
+      "weights": {
+        "price": 0.1,
+        "fundamental": 0.05,
+        "supply_demand": 0.3,
+        "consensus": 0.45,
+        "disclosure": 0.0333,
+        "news": 0.0333,
+        "macro": 0.0333
+      },
+      "score": 1.0,
+      "candidates_tried": 2328
+    },
+    "000660.KS": {
+      "name": "SK하이닉스",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.05,
+        "supply_demand": 0.3,
+        "consensus": 0.2,
+        "disclosure": 0.1333,
+        "news": 0.1333,
+        "macro": 0.1333
+      },
+      "score": 1.0,
+      "candidates_tried": 2328
+    },
+    "TSLA": {
+      "name": "Tesla",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.05,
+        "supply_demand": 0.05,
+        "consensus": 0.4,
+        "disclosure": 0.15,
+        "news": 0.15,
+        "macro": 0.15
+      },
+      "score": 0.0,
+      "candidates_tried": 2328
+    },
+    "MSFT": {
+      "name": "Microsoft",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.15,
+        "supply_demand": 0.05,
+        "consensus": 0.45,
+        "disclosure": 0.1,
+        "news": 0.1,
+        "macro": 0.1
+      },
+      "score": 0.072,
+      "candidates_tried": 2328
+    },
+    "AAPL": {
+      "name": "Apple",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.05,
+        "supply_demand": 0.05,
+        "consensus": 0.4,
+        "disclosure": 0.15,
+        "news": 0.15,
+        "macro": 0.15
+      },
+      "score": 0.0,
+      "candidates_tried": 2328
+    },
+    "035720.KS": {
+      "name": "카카오",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.05,
+        "supply_demand": 0.05,
+        "consensus": 0.4,
+        "disclosure": 0.15,
+        "news": 0.15,
+        "macro": 0.15
+      },
+      "score": 0.0,
+      "candidates_tried": 2328
+    },
+    "005930.KS": {
+      "name": "삼성전자",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.05,
+        "supply_demand": 0.15,
+        "consensus": 0.35,
+        "disclosure": 0.1333,
+        "news": 0.1333,
+        "macro": 0.1333
+      },
+      "score": 1.0,
+      "candidates_tried": 2328
+    },
+    "NVDA": {
+      "name": "NVIDIA",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.35,
+        "supply_demand": 0.05,
+        "consensus": 0.4,
+        "disclosure": 0.05,
+        "news": 0.05,
+        "macro": 0.05
+      },
+      "score": 0.479,
+      "candidates_tried": 2328
+    },
+    "035420.KS": {
+      "name": "NAVER",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.05,
+        "supply_demand": 0.1,
+        "consensus": 0.35,
+        "disclosure": 0.15,
+        "news": 0.15,
+        "macro": 0.15
+      },
+      "score": 0.19,
+      "candidates_tried": 2328
+    },
+    "GOOGL": {
+      "name": "Alphabet",
+      "weights": {
+        "price": 0.05,
+        "fundamental": 0.05,
+        "supply_demand": 0.15,
+        "consensus": 0.35,
+        "disclosure": 0.1333,
+        "news": 0.1333,
+        "macro": 0.1333
+      },
+      "score": 0.459,
+      "candidates_tried": 2328
+    }
+  }
+}

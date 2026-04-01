@@ -1,0 +1,132 @@
+{
+  "005380.KS": {
+    "name": "현대차",
+    "weights": {
+      "price": 0.1,
+      "fundamental": 0.05,
+      "supply_demand": 0.3,
+      "consensus": 0.45,
+      "disclosure": 0.0333,
+      "news": 0.0333,
+      "macro": 0.0333
+    },
+    "backtest_score": 1.0
+  },
+  "000660.KS": {
+    "name": "SK하이닉스",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.05,
+      "supply_demand": 0.3,
+      "consensus": 0.2,
+      "disclosure": 0.1333,
+      "news": 0.1333,
+      "macro": 0.1333
+    },
+    "backtest_score": 1.0
+  },
+  "TSLA": {
+    "name": "Tesla",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.05,
+      "supply_demand": 0.05,
+      "consensus": 0.4,
+      "disclosure": 0.15,
+      "news": 0.15,
+      "macro": 0.15
+    },
+    "backtest_score": 0.0
+  },
+  "MSFT": {
+    "name": "Microsoft",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.15,
+      "supply_demand": 0.05,
+      "consensus": 0.45,
+      "disclosure": 0.1,
+      "news": 0.1,
+      "macro": 0.1
+    },
+    "backtest_score": 0.072
+  },
+  "AAPL": {
+    "name": "Apple",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.05,
+      "supply_demand": 0.05,
+      "consensus": 0.4,
+      "disclosure": 0.15,
+      "news": 0.15,
+      "macro": 0.15
+    },
+    "backtest_score": 0.0
+  },
+  "035720.KS": {
+    "name": "카카오",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.05,
+      "supply_demand": 0.05,
+      "consensus": 0.4,
+      "disclosure": 0.15,
+      "news": 0.15,
+      "macro": 0.15
+    },
+    "backtest_score": 0.0
+  },
+  "005930.KS": {
+    "name": "삼성전자",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.05,
+      "supply_demand": 0.15,
+      "consensus": 0.35,
+      "disclosure": 0.1333,
+      "news": 0.1333,
+      "macro": 0.1333
+    },
+    "backtest_score": 1.0
+  },
+  "NVDA": {
+    "name": "NVIDIA",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.35,
+      "supply_demand": 0.05,
+      "consensus": 0.4,
+      "disclosure": 0.05,
+      "news": 0.05,
+      "macro": 0.05
+    },
+    "backtest_score": 0.479
+  },
+  "035420.KS": {
+    "name": "NAVER",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.05,
+      "supply_demand": 0.1,
+      "consensus": 0.35,
+      "disclosure": 0.15,
+      "news": 0.15,
+      "macro": 0.15
+    },
+    "backtest_score": 0.19
+  },
+  "GOOGL": {
+    "name": "Alphabet",
+    "weights": {
+      "price": 0.05,
+      "fundamental": 0.05,
+      "supply_demand": 0.15,
+      "consensus": 0.35,
+      "disclosure": 0.1333,
+      "news": 0.1333,
+      "macro": 0.1333
+    },
+    "backtest_score": 0.459
+  }
+}
