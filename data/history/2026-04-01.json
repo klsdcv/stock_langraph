@@ -107,100 +107,105 @@
       "name": "Apple",
       "market": "NASDAQ",
       "signal": "HOLD",
-      "confidence": 0.94,
-      "weighted_score": 0.5292,
+      "confidence": 0.953,
+      "weighted_score": 0.5431,
       "scores": {
-        "price": 0.375,
+        "price": 0.4425,
         "fundamental": 0.6175,
         "disclosure": 0.5,
-        "news": 0.58,
+        "news": 0.56,
         "macro": 0.4125,
         "supply_demand": 0.535,
         "consensus": 0.7275
       },
-      "current_price": 253.7899932861328,
-      "target_mean": 295.31,
-      "error_count": 0
+      "current_price": 255.6300048828125,
+      "target_mean": 295.07,
+      "error_count": 0,
+      "errors": []
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "market": "NASDAQ",
       "signal": "HOLD",
-      "confidence": 0.925,
-      "weighted_score": 0.5292,
+      "confidence": 0.933,
+      "weighted_score": 0.5188,
       "scores": {
-        "price": 0.345,
+        "price": 0.375,
         "fundamental": 0.6475,
         "disclosure": 0.5,
-        "news": 0.6,
+        "news": 0.48,
         "macro": 0.4125,
         "supply_demand": 0.535,
         "consensus": 0.7375
       },
-      "current_price": 174.39999389648438,
+      "current_price": 175.75,
       "target_mean": 268.22,
-      "error_count": 0
+      "error_count": 0,
+      "errors": []
     },
     {
       "ticker": "TSLA",
       "name": "Tesla",
       "market": "NASDAQ",
       "signal": "HOLD",
-      "confidence": 0.946,
-      "weighted_score": 0.4718,
+      "confidence": 0.956,
+      "weighted_score": 0.4639,
       "scores": {
-        "price": 0.405,
+        "price": 0.375,
         "fundamental": 0.2975,
         "disclosure": 0.5,
-        "news": 0.42,
+        "news": 0.47,
         "macro": 0.4125,
         "supply_demand": 0.55,
-        "consensus": 0.6475
+        "consensus": 0.595
       },
-      "current_price": 371.75,
-      "target_mean": 421.27,
-      "error_count": 0
+      "current_price": 381.260009765625,
+      "target_mean": 418.83,
+      "error_count": 0,
+      "errors": []
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "market": "NASDAQ",
-      "signal": "HOLD",
-      "confidence": 0.915,
-      "weighted_score": 0.5601,
+      "signal": "BUY",
+      "confidence": 0.883,
+      "weighted_score": 0.5674,
       "scores": {
         "price": 0.405,
         "fundamental": 0.6875,
-        "disclosure": 0.6,
-        "news": 0.59,
+        "disclosure": 0.65,
+        "news": 0.53,
         "macro": 0.4125,
         "supply_demand": 0.505,
-        "consensus": 0.8
+        "consensus": 0.875
       },
-      "current_price": 370.1700134277344,
-      "target_mean": 589.9,
-      "error_count": 0
+      "current_price": 369.3699951171875,
+      "target_mean": 587.31,
+      "error_count": 0,
+      "errors": []
     },
     {
       "ticker": "GOOGL",
       "name": "Alphabet",
       "market": "NASDAQ",
       "signal": "HOLD",
-      "confidence": 0.891,
-      "weighted_score": 0.5664,
+      "confidence": 0.882,
+      "weighted_score": 0.5446,
       "scores": {
-        "price": 0.405,
+        "price": 0.375,
         "fundamental": 0.6175,
-        "disclosure": 0.65,
-        "news": 0.5,
+        "disclosure": 0.68,
+        "news": 0.42,
         "macro": 0.4125,
         "supply_demand": 0.5575,
-        "consensus": 0.875
+        "consensus": 0.84
       },
-      "current_price": 287.55999755859375,
+      "current_price": 297.3900146484375,
       "target_mean": 376.93,
-      "error_count": 0
+      "error_count": 0,
+      "errors": []
     }
   ]
 }
