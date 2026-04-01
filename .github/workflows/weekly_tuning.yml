@@ -1,0 +1,68 @@
+name: Weekly Weight Tuning
+
+on:
+  schedule:
+    # 매주 일요일 12:00 KST = 03:00 UTC
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
+    inputs:
+      eval_days:
+        description: 'Evaluation period (business days)'
+        required: false
+        default: '10'
+      auto_apply:
+        description: 'Auto-apply new weights'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+jobs:
+  tune:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backtest evaluation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          DAYS=${{ github.event.inputs.eval_days || '10' }}
+          python -m tools.backtest_evaluator --days $DAYS
+
+      - name: Run weight tuning
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          DAYS=${{ github.event.inputs.eval_days || '10' }}
+          python -m tools.weight_tuner tune --days $DAYS
+
+      - name: Apply weights (if auto_apply)
+        if: ${{ github.event.inputs.auto_apply == 'true' }}
+        run: python -m tools.weight_tuner apply
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/tuning/ config/settings.py
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "tuning: ${DATE} weekly weight evaluation"
+            git push
+          fi

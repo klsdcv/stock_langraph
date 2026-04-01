@@ -1,0 +1,76 @@
+name: Daily Stock Tracker
+
+on:
+  schedule:
+    # 국장: 평일 16:00 KST = 07:00 UTC
+    - cron: '0 7 * * 1-5'
+    # 미장: 화~토 07:00 KST = 22:00 UTC (전날)
+    - cron: '0 22 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      market:
+        description: 'Market to analyze'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - krx
+          - us
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Determine market
+        id: market
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "market=${{ github.event.inputs.market }}" >> $GITHUB_OUTPUT
+          else
+            # cron 시간으로 시장 판별
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" = "07" ]; then
+              echo "market=krx" >> $GITHUB_OUTPUT
+            else
+              echo "market=us" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Run tracker
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          python daily_tracker.py --market ${{ steps.market.outputs.market }}
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/history/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            DATE=$(date +%Y-%m-%d)
+            MARKET=${{ steps.market.outputs.market }}
+            git commit -m "daily: ${DATE} ${MARKET} tracking results"
+            git push
+          fi
