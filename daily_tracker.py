@@ -84,6 +84,7 @@ def extract_summary(result: dict, stock_info: dict) -> dict:
         "current_price": current_price,
         "target_mean": target_mean,
         "error_count": len(result.get("error_log", [])),
+        "errors": result.get("error_log", []),
     }
 
 
