@@ -1,0 +1,111 @@
+{
+  "date": "2026-04-17",
+  "period": "short",
+  "stocks": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "market": "NASDAQ",
+      "signal": "HOLD",
+      "confidence": 0.981,
+      "weighted_score": 0.5626,
+      "scores": {
+        "price": 0.5525,
+        "fundamental": 0.6175,
+        "disclosure": 0.5,
+        "news": 0.5,
+        "macro": 0.6575,
+        "supply_demand": 0.535,
+        "consensus": 0.6525
+      },
+      "current_price": 263.3999938964844,
+      "target_mean": 296.46,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "NASDAQ",
+      "signal": "BUY",
+      "confidence": 0.952,
+      "weighted_score": 0.6002,
+      "scores": {
+        "price": 0.6025,
+        "fundamental": 0.6475,
+        "disclosure": 0.5,
+        "news": 0.5,
+        "macro": 0.6575,
+        "supply_demand": 0.535,
+        "consensus": 0.8
+      },
+      "current_price": 198.35000610351562,
+      "target_mean": 268.61,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "market": "NASDAQ",
+      "signal": "HOLD",
+      "confidence": 0.941,
+      "weighted_score": 0.4925,
+      "scores": {
+        "price": 0.4275,
+        "fundamental": 0.2975,
+        "disclosure": 0.45,
+        "news": 0.6,
+        "macro": 0.6575,
+        "supply_demand": 0.55,
+        "consensus": 0.52
+      },
+      "current_price": 388.8999938964844,
+      "target_mean": 414.59,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "NASDAQ",
+      "signal": "BUY",
+      "confidence": 0.955,
+      "weighted_score": 0.5756,
+      "scores": {
+        "price": 0.4275,
+        "fundamental": 0.6175,
+        "disclosure": 0.65,
+        "news": 0.65,
+        "macro": 0.6575,
+        "supply_demand": 0.505,
+        "consensus": 0.7375
+      },
+      "current_price": 420.260009765625,
+      "target_mean": 580.87,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "NASDAQ",
+      "signal": "HOLD",
+      "confidence": 0.986,
+      "weighted_score": 0.6108,
+      "scores": {
+        "price": 0.5425,
+        "fundamental": 0.6175,
+        "disclosure": 0.65,
+        "news": 0.71,
+        "macro": 0.6575,
+        "supply_demand": 0.5575,
+        "consensus": 0.65
+      },
+      "current_price": 336.0199890136719,
+      "target_mean": 376.06,
+      "error_count": 0,
+      "errors": []
+    }
+  ]
+}
